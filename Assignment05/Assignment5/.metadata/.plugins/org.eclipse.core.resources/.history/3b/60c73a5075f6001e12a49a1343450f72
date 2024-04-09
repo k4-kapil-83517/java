@@ -1,0 +1,112 @@
+package com.employee.tester;
+
+public class tester {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+     
+        Fruits arr[] = new Fruits[5];
+		int index = 0;
+		Fruits p;
+		int choice;
+      
+        while (true) {
+            System.out.println("0. Exit");
+            System.out.println("1. Add Mango");
+            System.out.println("2. Add Orange");
+            System.out.println("3. Add Apple");
+            System.out.println("4. Display names of all fruits in the Basket");
+            System.out.println("5. Display name, color, weight, taste of all fresh fruits");
+            System.out.println("6. Display tastes of all stale fruits");
+            System.out.println("7. Mark a fruit as stale");
+            System.out.println("Enter your choice:");
+            choice = scanner.nextInt();
+            scanner.nextLine(); 
+            switch (choice) {
+                case 0:
+                    System.out.println("Exiting...");
+                    System.out.println("Thank you...");
+                    System.exit(0);
+                case 1:
+                    if (index < arr.length) {
+                        System.out.println("Enter color and weight of Mango:");
+                        p = new Mango();
+    					p.acceptData(scanner);
+    					p.displayData();
+    					arr[index] = p;
+    					index++;
+                   
+                        System.out.println("Mango added to Basket.");
+                    } else {
+                        System.out.println("arr is full!");
+                    }
+                    break;
+                case 2:
+                    if (index < arr.length) {
+                        System.out.println("Enter color and weight of Orange:");
+                        p = new Orange();
+    					p.acceptData(scanner);
+    					p.displayData();
+    					arr[index] = p;
+    					index++;
+                        System.out.println("Orange added to Basket.");
+                    } else {
+                        System.out.println("arr is full!");
+                    }
+                    break;
+                case 3:
+                    if (index < arr.length) {
+                        System.out.println("Enter color and weight of Apple:");
+                        p = new Apple();
+    					p.acceptData(scanner);
+    					p.displayData();
+    					arr[index] = p;
+    					index++;
+                        System.out.println("Apple added to Basket.");
+                    } else {
+                        System.out.println("arr is full!");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Names of fruits in the Basket:");
+                    for (int i = 0; i < index; i++) {
+                        System.out.println(arr[i].getName());
+                    }
+                    break;
+                case 5:
+                    System.out.println("Details of fresh fruits in the Basket:");
+                    for (int i = 0; i < index; i++) {
+                        if (arr[i].isFresh()) {
+                            System.out.println(arr[i].toString() + ", Taste: " + arr[i].taste());
+                        }
+                    }
+                    break;
+                case 6:
+                    System.out.println("Tastes of stale fruits in the Basket:");
+                    for (int i = 0; i < index; i++) {
+                        if (!arr[i].isFresh()) {
+                            System.out.println(arr[i].taste());
+                        }
+                    }
+                    break;
+                case 7:
+                    System.out.println("Enter the index of fruit to mark as stale:");
+                    int indx = scanner.nextInt();
+                    if (indx >= 0 && indx < index) {
+                        arr[indx].isFresh = false;
+                        System.out.println("Fruit marked as stale.");
+                    } else {
+                        System.out.println("Invalid index!");
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+            }
+          
+        }
+      
+       
+    }
+
+}

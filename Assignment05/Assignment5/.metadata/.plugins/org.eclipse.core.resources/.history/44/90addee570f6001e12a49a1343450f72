@@ -1,0 +1,15 @@
+package com.employee.salary;
+
+import com.employee.interfaces.Acceptable;
+
+public class CommissionEmployees extends Employee implements Acceptable {
+double commissionRate;
+double grossSales;
+
+	@Override
+	public void calculateTotalSalary() {
+		// TODO Auto-generated method stub
+earning=commissionRate*grossSales;
+	}
+
+}

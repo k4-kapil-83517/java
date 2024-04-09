@@ -1,0 +1,13 @@
+package com.employee.salary;
+
+public class CommissionEmployees extends Employee {
+double commissionRate;
+double grossSales;
+
+	@Override
+	public void calculateTotalSalary() {
+		// TODO Auto-generated method stub
+earning=commissionRate*grossSales;
+	}
+
+}

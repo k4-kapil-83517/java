@@ -1,0 +1,23 @@
+package com.employee.salary;
+
+import java.util.Scanner;
+
+import com.employee.interfaces.Acceptable;
+
+public class SalariedEmployees extends Employee implements Acceptable {
+double weeklySalary;
+@Override
+	public void acceptData(Scanner sc) {
+		// TODO Auto-generated method stub
+		super.acceptData(sc);
+		System.out.print("Enter Weekly Salary - ");
+		weeklySalary = sc.nextDouble();
+	}
+	@Override
+	public double calculateTotalSalary() {
+		// TODO Auto-generated method stub
+		return weeklySalary;
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.employee.salary;
+
+import com.employee.interfaces.Acceptable;
+
+public class BaseSalariedCommissionEmployees extends CommissionEmployees implements Acceptable {
+
+	
+	
+	
+}

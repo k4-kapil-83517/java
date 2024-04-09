@@ -1,0 +1,11 @@
+package com.employee.salary;
+
+public class HourlyEmployees extends Employee {
+
+	@Override
+	public void calculateTotalSalary() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

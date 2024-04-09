@@ -1,0 +1,6 @@
+package com.employee.salary;
+
+
+public class BaseSalariedCommissionEmployees extends CommissionEmployees {
+
+}

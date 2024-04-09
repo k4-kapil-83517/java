@@ -1,0 +1,27 @@
+package com.employee.salary;
+
+import java.util.Scanner;
+
+import com.employee.interfaces.Acceptable;
+
+public class HourlyEmployees extends Employee implements Acceptable {
+	double hourlyWage;
+	int hours;
+	@Override
+		public void acceptData(Scanner sc) {
+		
+			super.acceptData(sc);
+			System.out.print("Enter wage per hour - ");
+			hourlyWage = sc.nextDouble();
+			System.out.print("Enter HOurs - ");
+			hours = sc.nextInt();
+		}
+
+		@Override
+		public void calculateTotalSalary() {
+		
+			
+
+		}
+
+	}

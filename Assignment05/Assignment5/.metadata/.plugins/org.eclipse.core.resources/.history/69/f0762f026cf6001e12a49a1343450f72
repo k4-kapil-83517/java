@@ -1,0 +1,14 @@
+package com.employee.salary;
+
+import com.employee.interfaces.Acceptable;
+
+public class SalariedEmployees extends Employee implements Acceptable {
+double weeklySalary;
+
+	@Override
+	public void calculateTotalSalary() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

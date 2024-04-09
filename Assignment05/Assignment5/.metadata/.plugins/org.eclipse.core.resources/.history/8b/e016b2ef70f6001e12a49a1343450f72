@@ -1,0 +1,21 @@
+package com.employee.salary;
+
+import java.util.Scanner;
+
+import com.employee.interfaces.Acceptable;
+
+public class CommissionEmployees extends Employee implements Acceptable {
+double commissionRate;
+double grossSales;
+@Override
+	public void acceptData(Scanner sc) {
+		// TODO Auto-generated method stub
+		super.acceptData(sc);
+	}
+	@Override
+	public void calculateTotalSalary() {
+		// TODO Auto-generated method stub
+earning=commissionRate*grossSales;
+	}
+
+}
